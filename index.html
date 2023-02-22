@@ -1,146 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/1bdfb73878.js" crossorigin="anonymous"></script>
-    <title>Instagram</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Photo Feed w/ Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/aae9d9ecb2.js" crossorigin="anonymous"></script>
+  <title>Instagram Photo Feed w/ Bootstrap</title>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-
-
-                </ul>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Create a new post
-                </button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-gear"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <div class="d-flex gap-3">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Create a new post
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Publish</button>
+              </div>
             </div>
+          </div>
         </div>
-    </nav>
-    <div class="justify-content-center d-flex">
-        <ul class="nav nav-tabs  " id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
-                    role="tab" aria-controls="home" aria-selected="true"><i
-                        class="fa-solid fa-table-cells"></i></button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
-                    role="tab" aria-controls="profile" aria-selected="false"><i class="fa-solid fa-square"></i></button>
-            </li>
-
-        </ul>
+        <!-- End Modal -->
+        <!-- Start dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-gear"></i>
+            <!-- add fontawesome -->
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+          </ul>
+        </div>
+        <!-- End dropdown -->
+      </div>
     </div>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-          <div class="d-flex justify-content-between">
-            <div class="d-inline-block p-2">
-              <img src="https://picsum.photos/seed/picsu1/500/300" class="img-fluid">
-            </div>
-            <div class="d-inline-block p-2">
-              <img src="https://picsum.photos/seed/picsu14/500/300" class="img-fluid">
-            </div>
-            <div class="d-inline-block p-2">
-              <img src="https://picsum.photos/seed/picsu3/500/300" class="img-fluid">
+  </nav>
+  <!-- NavPills -->
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+            type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i
+              class="fa-solid fa-table-cells"></i></button>
+          <!-- add fontawesome -->
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+            type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i
+              class="fa-solid fa-square"></i></button>
+          <!-- add fontawesome -->
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content" id="pills-tabContent">
+      <!-- Grid Pictures -->
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="row">
+          <div class="col d-flex justify-content-center">
+            <img class="img-fluid img-thumbnail"
+              src="https://images.deepai.org/machine-learning-models/678598683d4d43d4932950362e81ca8d/renais.jpeg" alt="" />
+          </div>
+          <div class="col d-flex justify-content-center">
+            <img class="img-fluid img-thumbnail"
+              src="https://images.deepai.org/machine-learning-models/5f4d991d81294bca8f27008ada925e2d/cmpre.jpeg"
+              alt="" />
+          </div>
+          <div class="col d-flex justify-content-center">
+            <img class="img-fluid img-thumbnail"
+              src="https://images.deepai.org/machine-learning-models/539569a99a4947b29d63b264c6539071/logos.jpeg"
+              alt="" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col d-flex justify-content-center">
+            <img class="img-fluid img-thumbnail"
+              src="https://images.deepai.org/machine-learning-models/ae2bb3b670154c34b5816efa1308d936/sf_fantasy.jpeg"
+              alt="" />
+          </div>
+          <div class="col d-flex justify-content-center">
+            <img class="img-fluid img-thumbnail"
+              src="https://images.deepai.org/machine-learning-models/c1a056e886a840bbaeec17097b368cc9/abstracttt.jpeg"
+              alt="" />
+          </div>
+          <div class="col d-flex justify-content-center">
+            <img class="img-fluid img-thumbnail" src="https://images.deepai.org/machine-learning-models/bc7ea35e26d64619875135025a19be15/impr.jpeg"
+              alt="" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col d-flex justify-content-center">
+            <img class="img-fluid img-thumbnail"
+              src="https://images.deepai.org/machine-learning-models/d4b1dd3ee43648a997650dc7f9e6923f/panda.jpeg" alt="" />
+          </div>
+          <div class="col d-flex justify-content-center">
+            <img class="img-fluid img-thumbnail" src="https://images.deepai.org/machine-learning-models/0c7ba850aa2443d7b40f9a45d9c86d3f/text2imgthumb.jpeg"
+              alt="" />
+          </div>
+          <div class="col d-flex justify-content-center">
+            <img class="img-fluid img-thumbnail"
+              src="https://images.deepai.org/machine-learning-models/0c7ba850aa2443d7b40f9a45d9c86d3f/text2imgthumb.jpeg"
+              alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- End Grid Pictures -->
+      <!-- Posts -->
+      
+      <div class="tab-pane fade d-flex justify-content-center" id="pills-profile" role="tabpanel"
+        aria-labelledby="pills-profile-tab">
+        <div>
+          <div class="card mb-3" style="width: 33rem;">
+            <h5> My interaction with an AI machine</h5> 
+            <p class="date">12/13</p>
+            <img src="https://api.deepai.org/job-view-file/d8b0bec2-8c54-4aa6-a28e-bca05ee9517c/outputs/output.jpg" class="card-img-bottom"
+              alt="...">
+            <div class="card-body">
+              <p class="card-text"> I am not sure what the AI is try to portay but I put renaissance.</p>
             </div>
           </div>
-          <div class="d-flex justify-content-between">
-            <div class="d-inline-block p-2">
-              <img src="https://picsum.photos/seed/picsu2/500/300" class="img-fluid">
-            </div>
-            <div class="d-inline-block p-2">
-              <img src="https://picsum.photos/seed/picsu5/500/300" class="img-fluid">
-            </div>
-            <div class="d-inline-block p-2">
-              <img src="https://picsum.photos/seed/picsu5/500/300" class="img-fluid">
+          <div class="card mb-3" style="width: 33rem;">
+            <h5> Another Ai pic</h5>  <span>10/2</span>
+            <img
+              src="https://images.deepai.org/machine-learning-models/90a92356430246d68e69fab0e2ee3dbe/cupcoff.jpeg"
+              class="card-img-bottom" alt="...">
+            <div class="card-body">
+              <p class="card-text"> This is the rendering of Ai for a 1910 drawing of a cup</p>
             </div>
           </div>
-          <div class="d-flex justify-content-between">
-            <div class="d-inline-block p-2">
-              <img src="https://picsum.photos/seed/picsut/500/300" class="img-fluid">
+          <div class="card mb-3" style="width: 33rem;">
+            <h5> Pilot Instructor die mid flight </h5> <span>10/3</span>
+            <img
+              src="https://api.deepai.org/job-view-file/f464549d-7e5e-4ea6-b451-50a1d81cb6a6/outputs/output.jpg"
+              class="card-img-bottom" alt="...">
+            <div class="card-body">
+              <p class="card-text"> Another some people are about to croak news, I bet he took the jab.</p>
             </div>
-            <div class="d-inline-block p-2">
-              <img src="https://picsum.photos/seed/picsuh/500/300" class="img-fluid">
+          </div>
+          <div class="card mb-3" style="width: 33rem;">
+            <h5> Ballet Dancers</h5> <span>10/4</span>
+            <img
+              src="https://images.deepai.org/machine-learning-models/bc7ea35e26d64619875135025a19be15/impr.jpeg"
+              class="card-img-bottom" alt="...">
+            <div class="card-body">
+              <p class="card-text"> couple ladies dancing ballet</p>
             </div>
-            <div class="d-inline-block p-2">
-              <img src="https://picsum.photos/seed/picsuy/500/300" class="img-fluid">
+          </div>
+          <div class="card mb-3" style="width: 33rem;">
+            <h5> look at them eyes </h5> <span>10/5</span>
+            <img
+              src="https://api.deepai.org/job-view-file/194f3cff-9de2-4470-8ade-6c1afdcd8d10/outputs/output.jpg"
+              class="card-img-bottom" alt="...">
+            <div class="card-body">
+              <p class="card-text"> the most beautiful AI generated animal I have seen</p>
+            </div>
+          </div>
+          <div class="card mb-3" style="width: 33rem;">
+            <h6> A beautiful Panda </h6> <span>10/6</span>
+            <img src="https://images.deepai.org/machine-learning-models/d4b1dd3ee43648a997650dc7f9e6923f/panda.jpeg" class="card-img-bottom" alt="...">
+            <div class="card-body">
+              <p class="card-text">A beautiful Panda Bear</p>
             </div>
           </div>
         </div>
       </div>
-
-
-        </div>
-        <div class="tab-pane fade justify-content-center" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <div class="card mx-auto" style="width: 40rem;">
-              <div class="card-header"></div>
-              <img src="https://picsum.photos/seed/picsuy/2800/2400" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-
+      <!-- End Posts -->
     </div>
+  </div>
+  <!-- End of NavPills -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
 </body>
-
 </html>
